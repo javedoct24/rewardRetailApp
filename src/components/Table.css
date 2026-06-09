@@ -1,0 +1,58 @@
+.table-section {
+    margin-bottom: 2.5rem;
+}
+
+.table-title{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 0.35rem;
+    display: inline-block;
+}
+
+.table-scroll {
+    overflow-x: auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.rewards-table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background-color: #fff;
+}
+
+.rewards-table thead{
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+.rewards-table thead th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.rewards-table tbody tr{
+    border-bottom: 1px solid #e8e8e8;
+    transition: background-color 0.15s ease;
+}
+
+.rewards-table tbody tr:hover{
+    background-color:  #f0f6ff;
+}
+
+.rewards-table tbody td {
+    padding: 0.65rem 1rem;
+    color: #333; 
+}
+
+.points-cell{
+    font-weight: 700;
+    color: #27ae60;
+    text-align: right;
+}
