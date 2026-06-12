@@ -1,0 +1,137 @@
+[
+  {
+    "transactionId": "TXN-001",
+    "customerId": "CUST-001",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "purchaseDate": "Mar-05-2026",
+    "productPurchase": "Smart TV 55\"",
+    "price": 120.0
+  },
+  {
+    "transactionId": "TXN-002",
+    "customerId": "CUST-001",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "purchaseDate": "Mar-22-2026",
+    "productPurchase": "Bluetooth Soundbar",
+    "price": 75.5
+  },
+  {
+    "transactionId": "TXN-003",
+    "customerId": "CUST-001",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "purchaseDate": "Apr-10-2026",
+    "productPurchase": "Gaming Laptop",
+    "price": 250.0
+  },
+  {
+    "transactionId": "TXN-004",
+    "customerId": "CUST-001",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "purchaseDate": "May-14-2026",
+    "productPurchase": "Wireless Headphones",
+    "price": 100.2
+  },
+  {
+    "transactionId": "TXN-005",
+    "customerId": "CUST-001",
+    "firstName": "Alice",
+    "lastName": "Johnson",
+    "purchaseDate": "May-28-2026",
+    "productPurchase": "USB-C Hub",
+    "price": 45.0
+  },
+  {
+    "transactionId": "TXN-006",
+    "customerId": "CUST-002",
+    "firstName": "Bob",
+    "lastName": "Martinez",
+    "purchaseDate": "Mar-01-2026",
+    "productPurchase": "Mechanical Keyboard",
+    "price": 89.99
+  },
+  {
+    "transactionId": "TXN-007",
+    "customerId": "CUST-002",
+    "firstName": "Bob",
+    "lastName": "Martinez",
+    "purchaseDate": "Mar-18-2026",
+    "productPurchase": "Monitor 27\"",
+    "price": 175.0
+  },
+  {
+    "transactionId": "TXN-008",
+    "customerId": "CUST-002",
+    "firstName": "Bob",
+    "lastName": "Martinez",
+    "purchaseDate": "Apr-07-2026",
+    "productPurchase": "Office Chair",
+    "price": 110.0
+  },
+  {
+    "transactionId": "TXN-009",
+    "customerId": "CUST-002",
+    "firstName": "Bob",
+    "lastName": "Martinez",
+    "purchaseDate": "Apr-25-2026",
+    "productPurchase": "Standing Desk",
+    "price": 299.99
+  },
+  {
+    "transactionId": "TXN-010",
+    "customerId": "CUST-002",
+    "firstName": "Bob",
+    "lastName": "Martinez",
+    "purchaseDate": "Jun-10-2026",
+    "productPurchase": "Desk Lamp",
+    "price": 40.0
+  },
+  {
+    "transactionId": "TXN-011",
+    "customerId": "CUST-003",
+    "firstName": "Clara",
+    "lastName": "Smith",
+    "purchaseDate": "Mar-10-2026",
+    "productPurchase": "Smartphone",
+    "price": 199.99
+  },
+  {
+    "transactionId": "TXN-012",
+    "customerId": "CUST-003",
+    "firstName": "Clara",
+    "lastName": "Smith",
+    "purchaseDate": "Mar-30-2026",
+    "productPurchase": "Tablet case",
+    "price": 35.0
+  },
+  {
+    "transactionId": "TXN-013",
+    "customerId": "CUST-003",
+    "firstName": "Clara",
+    "lastName": "Smith",
+    "purchaseDate": "May-20-2026",
+    "productPurchase": "E-Reader",
+    "price": 130.0
+  },
+  {
+    "transactionId": "TXN-014",
+    "customerId": "CUST-003",
+    "firstName": "Clara",
+    "lastName": "Smith",
+    "purchaseDate": "Jun-05-2026",
+    "productPurchase": "Smart Watch",
+    "price": 220.0
+  },
+  {
+    "transactionId": "TXN-015",
+    "customerId": "CUST-003",
+    "firstName": "Clara",
+    "lastName": "Smith",
+    "purchaseDate": "Jun-20-2026",
+    "productPurchase": "Wireless Charger",
+    "price": 55.0
+  }
+]

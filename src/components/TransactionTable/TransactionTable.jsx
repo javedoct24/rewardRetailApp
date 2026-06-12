@@ -1,42 +1,45 @@
 import PropTypes from "prop-types";
+import dayjs from 'dayjs';
 import { calculatePointsForTransaction } from "../../utils/calculateRewards";
-import "../Table.css";
+import GenericTable from '../GenericTable/GenericTable';
+import '../Table.css';
+
 /** 
  * TransactionTable - Displays all transactions records sorted by purchase date.
  * Reward points are computed on the fly from the price; they are NOT sorted in state.
  */
 
 function TransactionTable({ transactions }) {
+    const columns = [
+        { header: 'Transaction ID', accessor: 'transactionId' },
+        {
+            header: 'Customer Name',
+            render: (txn) => `${txn.firstName} ${txn.lastName}`,
+        },
+        {
+            header: 'Purchase Date',
+            render: (txn) => dayjs(txn.purchaseDate, 'MMM-DD-YYYY', true).format('MMM DD, YYYY'),
+        },
+        { header: 'Product Purchase', accessor: 'productPurchase' },
+        {
+            header: 'Price ($)',
+            render: (txn) => `$${txn.price.toFixed(2)}`,
+        },
+        {
+            header: 'Reward Points',
+            render: (txn) => calculatePointsForTransaction(txn.price),
+            className: 'points-cell',
+        },
+    ];
+
     return (
-        <section className="table-section">
-            <h2 className="table-title">All Transactions</h2>
-            <div className="table-scroll">
-                <table className="rewards-table" aria-label="All transactions sorted by purchase date"> 
-                    <thead>
-                        <tr>
-                            <th scope="col">Transaction ID</th>
-                            <th scope="col">Customer Name</th>
-                            <th scope="col">Purchase Date</th>
-                            <th scope="col">Product Purchase</th>
-                            <th scope="col">Price ($)</th>
-                            <th scope="col">Reward Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {transactions.map((txn) => (
-                            <tr key={txn.transactionId}>
-                                <td>{txn.transactionId}</td>
-                                <td>{txn.customerName}</td>
-                                <td>{new Date(txn.purchaseDate).toLocaleDateString()}</td>
-                                <td>{txn.productPurchase}</td>
-                                <td>${txn.price.toFixed(2)}</td>
-                                <td className="points-cell">{calculatePointsForTransaction(txn.price)}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <GenericTable
+            title="All Transactions"
+            ariaLabel="All transactions sorted by purchase date"
+            columns={columns}
+            data={transactions}
+            rowKey="transactionId"
+        />
     );
 }
 
@@ -45,12 +48,13 @@ TransactionTable.propTypes = {
         PropTypes.shape({
             transactionId: PropTypes.string.isRequired,
             customerId: PropTypes.string.isRequired,
-            customerName: PropTypes.string.isRequired,
+            firstName: PropTypes.string.isRequired,
+            lastName: PropTypes.string.isRequired,
             purchaseDate: PropTypes.string.isRequired,
             productPurchase: PropTypes.string.isRequired,
             price: PropTypes.number.isRequired,
         })
-    ).isRequired
+    ).isRequired,
 };
 
 export default TransactionTable;

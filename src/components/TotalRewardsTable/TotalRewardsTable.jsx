@@ -1,33 +1,29 @@
 import PropTypes from 'prop-types';
+import GenericTable from '../GenericTable/GenericTable';
 import '../Table.css';
 
 /** 
  * TotalRewardsTable - Displays total reward accumulated rewards points per customer.
- * Data arrives pre-sorted alphabetically by customeName
+ * Data arrives pre-sorted alphabetically by customerName
  */
 function TotalRewardsTable({ totalRewards }) {
+    const columns = [
+        { header: 'Customer Name', accessor: 'customerName' },
+        {
+            header: 'Total Reward Points',
+            accessor: 'rewardPoints',
+            className: 'points-cell',
+        },
+    ];
+
     return (
-        <section className="table-section">
-            <h2 className="table-title">Total Rewards</h2>
-            <div className="table-scroll">
-                <table className="rewards-table" aria-label="Total rewards points per customer">
-                    <thead>
-                        <tr>
-                            <th scope="col">Customer Name</th>
-                            <th scope="col">Total Reward Points</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {totalRewards.map((row) => (
-                            <tr key={row.customerId}>
-                                <td>{row.customerName}</td>
-                                <td className="points-cell">{row.rewardPoints}</td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-            </div>
-        </section>
+        <GenericTable
+            title="Total Rewards"
+            ariaLabel="Total rewards points per customer"
+            columns={columns}
+            data={totalRewards}
+            rowKey="customerId"
+        />
     );
 }
 
@@ -36,9 +32,9 @@ TotalRewardsTable.propTypes = {
         PropTypes.shape({
             customerId: PropTypes.string.isRequired,
             customerName: PropTypes.string.isRequired,
-            rewardPoints: PropTypes.number.isRequired
+            rewardPoints: PropTypes.number.isRequired,
         })
-    ).isRequired
+    ).isRequired,
 };
 
 export default TotalRewardsTable;

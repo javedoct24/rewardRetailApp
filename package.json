@@ -12,6 +12,7 @@
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "dayjs": "^1.11.10",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "prop-types": "^15.8.1"

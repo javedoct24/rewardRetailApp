@@ -1,0 +1,39 @@
+.date-range-picker {
+  border: 1px solid #dbe2ec;
+  border-radius: 10px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.date-range-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.date-range-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.date-range-row input {
+  padding: 0.5rem;
+  border: 1px solid #c1c7d0;
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.date-range-note {
+  margin-top: 0.75rem;
+  color: #667788;
+  font-size: 0.9rem;
+}
+
+.date-range-error {
+  margin-top: 0.75rem;
+  color: #d23f4e;
+  font-size: 0.95rem;
+}
