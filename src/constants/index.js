@@ -4,6 +4,12 @@ export const POINTS_THRESHOLD_LOW = 50; // purchases above this (up to HIGH) get
 export const POINTS_RATE_HIGH = 2; // points per dollar above THRESHOLD_HIGH
 export const POINTS_RATE_LOW = 1; // points per dollar between THRESHOLD_LOW and THRESHOLD_HIGH
 
+// Date and UI configuration
+export const MAX_DAYS = 90; // maximum date range selection in days
+export const DATE_FORMAT_DISPLAY = 'MMM DD, YYYY'; // format for displaying dates to users
+export const DATE_FORMAT_INPUT = 'YYYY-MM-DD'; // format for date input fields
+export const DATE_FORMAT_TRANSACTION = 'MMM-DD-YYYY'; // format for transaction purchase dates
+
 //Month name mapping for display
 export const MONTH_NAMES = [
     'January', 'February', 'March', 'April', 'May', 'June',

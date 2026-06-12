@@ -12,6 +12,7 @@ import {
     POINTS_RATE_HIGH,
     POINTS_RATE_LOW,
     MONTH_NAMES,
+    DATE_FORMAT_TRANSACTION,
 } from '../constants/index.js';
 
 export const calculatePointsForTransaction = (price) => {
@@ -31,7 +32,7 @@ export const aggregateMonthlyRewards = (transactions) => {
     if (!Array.isArray(transactions) || transactions.length === 0) return [];
 
     const monthlysMap = transactions.reduce((acc, txn) => {
-        const date = dayjs(txn.purchaseDate, 'MMM-DD-YYYY', true);
+        const date = dayjs(txn.purchaseDate, DATE_FORMAT_TRANSACTION, true);
         if (!date.isValid()) {
             throw new Error(`Invalid purchaseDate: ${txn.purchaseDate}`);
         }
@@ -86,8 +87,8 @@ export const aggregateTotalRewards = (transactions) => {
 export const sortTransactionsByDate = (transactions) => {
     if (!Array.isArray(transactions)) return [];
     return [...transactions].sort((a, b) => {
-        const dateA = dayjs(a.purchaseDate, 'MMM-DD-YYYY', true);
-        const dateB = dayjs(b.purchaseDate, 'MMM-DD-YYYY', true);
+        const dateA = dayjs(a.purchaseDate, DATE_FORMAT_TRANSACTION, true);
+        const dateB = dayjs(b.purchaseDate, DATE_FORMAT_TRANSACTION, true);
         if (!dateA.isValid() || !dateB.isValid()) return 0;
         return dateA.valueOf() - dateB.valueOf();
     });
